@@ -56,6 +56,26 @@ Or install the full runtime package:
 npm install @huaqiu/hqeda
 ```
 
+## Best Practices
+
+### Serializing Protobuf Messages
+
+Skill responses are protobuf message objects. **Never use `JSON.stringify()` directly** — it throws on `BigInt` fields and produces empty objects for oneof ADT fields.
+
+Use `toJson()` or `toJsonString()` from `@huaqiu/hqeda` instead:
+
+```typescript
+import { getSkill, toJsonString } from "@huaqiu/hqeda";
+
+const skill = getSkill('bom-get-bom');
+const result = await skill.execute(ctx, { project: 'my-project' });
+
+// Correct: uses toJsonString which handles BigInt, oneof, WKTs, etc.
+console.log(toJsonString(result, { prettySpaces: 2 }));
+
+// Wrong: JSON.stringify(result) — throws on BigInt fields!
+```
+
 ## Related Resources
 
 - [`@huaqiu/hqeda`](https://www.npmjs.com/package/@huaqiu/hqeda) — shared runtime npm package with all capabilities

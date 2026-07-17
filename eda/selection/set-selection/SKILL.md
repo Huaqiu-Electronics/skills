@@ -45,6 +45,15 @@ This skill provides access to the **`SelectionService.SetSelection`** RPC method
 | `context` | `ProjectContext` | no | no | — |
 | `entityIds` | `string[]` | no | yes | Replaces the current selection set. |
 
+## Response
+
+Returns a `SetSelectionResponse` message with the following fields:
+
+| Name | Type | Repeated | Description |
+| --- | --- | --- | --- |
+| `selectionRevision` | `bigint` | no | Snapshot revision of the selection set after the RPC applied.
+(Selection has its own revision, independent of kernel revision.) |
+
 ## Usage Examples
 
 ### set selection on a discovered project
@@ -60,29 +69,13 @@ _Source: `integration.test.ts`_
 }
 ```
 
-### sets selection and retrieves it back
+## Response Example
 
-_Source: `selection.test.ts`_
-
-```json
-{
-  "context": "<createProjectContext>",
-  "entityIds": [
-    "<targetId>"
-  ]
-}
-```
-
-### toJson produces LLM-friendly JSON output
-
-_Source: `selection.test.ts`_
+Representative response structure (field values are placeholders):
 
 ```json
 {
-  "context": "<createProjectContext>",
-  "entityIds": [
-    "<targetId>"
-  ]
+  "selectionRevision": "0"
 }
 ```
 
@@ -91,14 +84,45 @@ _Source: `selection.test.ts`_
 The skill is executed by the HQ EDA skill runtime, which provides a `SkillContext` with a connected `EditorClient`. The runtime calls `skill.execute(ctx, input)` where `input` must match the `SetSelectionRequestSchema` protobuf message shape.
 
 ```typescript
-import { getSkill } from "@huaqiu/hqeda";
+import { getSkill, toJsonString } from "@huaqiu/hqeda";
 
 const skill = getSkill("selection-set-selection");
 const result = await skill.execute(ctx, {
   context: {},
   entityIds: [],
 });
+
+// Always use toJsonString() to serialize protobuf messages —
+// never use JSON.stringify() directly (it fails on BigInt fields).
+console.log(toJsonString(result, { prettySpaces: 2 }));
 ```
+
+## Serializing Protobuf Messages
+
+Skill responses are protobuf message objects. **Do NOT use `JSON.stringify()` directly** — it will throw `Do not know how to serialize a BigInt` on 64-bit integer fields and produce empty objects for oneof ADT fields.
+
+Instead, use the `toJson()` or `toJsonString()` helpers:
+
+```typescript
+import { toJson, toJsonString } from "@huaqiu/hqeda";
+
+// Plain JSON object (BigInts converted to strings)
+const jsonObj = toJson(result);
+
+// Formatted JSON string
+const jsonStr = toJsonString(result, { prettySpaces: 2 });
+
+// Include zero-valued fields in output
+const full = toJsonString(result, { alwaysEmitImplicit: true });
+```
+
+These helpers correctly handle:
+
+- **BigInt fields** — converted to strings (protobuf JSON convention)
+- **oneof fields** — serialized as `{ case, value }` ADT objects
+- **Well-known types** — `Timestamp` → ISO string, `Duration` → `"Ns"` format, `Struct` → plain object
+- **bytes fields** — base64-encoded strings
+- **Zero-value omission** — empty fields are excluded (protobuf default)
 
 ## Related Skills
 

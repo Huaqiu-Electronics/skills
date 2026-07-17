@@ -58,3 +58,14 @@ Total: **28** skills in the **canvas** domain.
 - [All EDA skills](../SKILL.md)
 - [`@huaqiu/hqeda` npm package](https://www.npmjs.com/package/@huaqiu/hqeda) — shared runtime + capability registry
 
+## Best Practices
+
+**Always use `toJsonString()` (not `JSON.stringify()`) to serialize protobuf responses.** `JSON.stringify()` throws on `BigInt` fields and mishandles oneof ADT fields.
+
+```typescript
+import { getSkill, toJsonString } from "@huaqiu/hqeda";
+
+const result = await skill.execute(ctx, input);
+console.log(toJsonString(result, { prettySpaces: 2 }));
+```
+
