@@ -10,8 +10,8 @@ tags:
   - eda
   - huaqiu
   - placement
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Placement Skills

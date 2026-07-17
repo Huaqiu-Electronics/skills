@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - context
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: GetContextRequestSchema
   namespace: HqServicesV1ContextService

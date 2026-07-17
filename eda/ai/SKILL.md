@@ -10,8 +10,8 @@ tags:
   - eda
   - huaqiu
   - ai
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Ai Skills

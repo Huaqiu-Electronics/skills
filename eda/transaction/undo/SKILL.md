@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - transaction
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: UndoRequestSchema
   namespace: HqRuntimeV1Undo

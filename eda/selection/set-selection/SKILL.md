@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - selection
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: SetSelectionRequestSchema
   namespace: HqServicesV1SelectionService

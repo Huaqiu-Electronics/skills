@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - bom
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: GetBomRequestSchema
   namespace: HqFabV1GetEdaBom

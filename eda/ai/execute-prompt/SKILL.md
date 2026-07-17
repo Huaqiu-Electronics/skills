@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - ai
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: AIRequestSchema
   namespace: HqServicesV1AiService

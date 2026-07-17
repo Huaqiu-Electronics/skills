@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - canvas
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: CanvasContextRequestSchema
   namespace: HqServicesV1CanvasOpsService

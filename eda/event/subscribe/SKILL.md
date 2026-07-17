@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - event
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: SubscribeRequestSchema
   namespace: HqServicesV1EventService

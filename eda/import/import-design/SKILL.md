@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - import
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: ImportDesignRequestSchema
   namespace: HqServicesV1ImportService

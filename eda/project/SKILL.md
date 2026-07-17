@@ -10,8 +10,8 @@ tags:
   - eda
   - huaqiu
   - project
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Project Skills

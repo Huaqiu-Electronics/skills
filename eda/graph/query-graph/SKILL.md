@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - graph
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: GraphQueryRequestSchema
   namespace: HqServicesV1GraphService

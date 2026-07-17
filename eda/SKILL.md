@@ -11,8 +11,8 @@ tags:
   - huaqiu
   - kicad
   - electronics
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Huaqiu EDA Skills

@@ -10,8 +10,8 @@ tags:
   - eda
   - huaqiu
   - selection
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Selection Skills

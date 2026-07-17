@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - runtime
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: ExecuteCommandsRequestSchema
   namespace: HqRuntimeV1Command

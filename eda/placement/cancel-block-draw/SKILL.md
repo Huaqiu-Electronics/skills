@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - placement
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: ContextOnlyRequestSchema
   namespace: HqServicesV1ObjPlaceService

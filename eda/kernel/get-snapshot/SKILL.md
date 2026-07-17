@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - kernel
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: GetSnapshotRequestSchema
   namespace: HqServicesV1KernelService

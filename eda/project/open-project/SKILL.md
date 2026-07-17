@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - project
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: OpenProjectRequestSchema
   namespace: HqServicesV1ProjectService

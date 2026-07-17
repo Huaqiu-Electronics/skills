@@ -10,8 +10,8 @@ tags:
   - eda
   - huaqiu
   - obj-place
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 ---
 
 # Obj Place Skills

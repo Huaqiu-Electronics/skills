@@ -13,8 +13,8 @@ tags:
   - eda
   - huaqiu
   - erc
-entry: @huaqiu/hqeda
-manifest: @huaqiu/hqeda/skill.json
+entry: "@huaqiu/hqeda"
+manifest: "@huaqiu/hqeda/skill.json"
 inputSchema:
   name: ShowFindingsRequestSchema
   namespace: HqServicesV1ErcService
