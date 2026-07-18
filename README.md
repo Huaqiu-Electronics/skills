@@ -18,10 +18,7 @@ npx skills add Huaqiu-Electronics/skills --path eda/bom/get-bom
 
 ## Available Skills
 
-Total: **110** capabilities across **18** domains.
-
-- **Ai**
-  - [**Execute Prompt**](./eda/ai/execute-prompt/SKILL.md)
+Total: **109** capabilities across **17** domains.
 
 - **Bom**
   - [**Get Bom**](./eda/bom/get-bom/SKILL.md)

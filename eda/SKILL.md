@@ -3,7 +3,7 @@ name: eda
 metadata:
   category: eda
 description: >-
-  Full Huaqiu EDA skill collection — 110 executable capabilities across 18 domains including BOM, ERC, schematic, canvas, and project management.
+  Full Huaqiu EDA skill collection — 109 executable capabilities across 17 domains including BOM, ERC, schematic, canvas, and project management.
 version: 0.1.0
 vendor: Huaqiu Electronics
 tags:
@@ -17,13 +17,12 @@ manifest: "@huaqiu/hqeda/skill.json"
 
 # Huaqiu EDA Skills
 
-The official Huaqiu EDA skill collection — **110** executable capabilities across **18** domains. Each skill is a self-contained folder so you only load the capability you need.
+The official Huaqiu EDA skill collection — **109** executable capabilities across **17** domains. Each skill is a self-contained folder so you only load the capability you need.
 
 ## Skill Domains
 
 | Domain | Skills | Description |
 | --- | --- | --- |
-| [ai](ai/SKILL.md) | 1 | Ai operations |
 | [bom](bom/SKILL.md) | 1 | Bom operations |
 | [canvas](canvas/SKILL.md) | 28 | Canvas operations |
 | [capability](capability/SKILL.md) | 1 | Capability operations |
